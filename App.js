@@ -15,7 +15,7 @@ export default function App() {
         <Text>Loading</Text>
       ) : (
         <NavigationContainer>
-          <StatusBar backgroundColor="#186FB7" barStyle="light-content" />
+          <StatusBar backgroundColor="#3BB77E" barStyle="light-content" />
           {isAuth ? <Main /> : <Auth />}
         </NavigationContainer>
       )}

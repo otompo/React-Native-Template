@@ -1,6 +1,15 @@
 import React from "react";
-import { View, StyleSheet, Text, ScrollView } from "react-native";
+import {
+  ScrollView,
+  View,
+  StyleSheet,
+  Dimensions,
+  Image,
+  Text,
+} from "react-native";
 import LottieView from "lottie-react-native";
+import SignUp from "../components/Auth/SignUp";
+var { width } = Dimensions.get("window");
 
 function SigninScreen(props) {
   return (
@@ -8,6 +17,13 @@ function SigninScreen(props) {
       showsVerticalScrollIndicator={false}
       contentContainerStyle={styles.container}
     >
+      {/* <Image
+        source={require("../assets/cover.png")}
+        alt="image"
+        style={styles.coverImage}
+      /> */}
+      <SignUp />
+      {/* 
       <View>
         <LottieView
           source={require("../assets/cigarette-man.json")}
@@ -15,7 +31,7 @@ function SigninScreen(props) {
           loop
           style={styles.loader}
         />
-      </View>
+      </View> */}
     </ScrollView>
   );
 }
@@ -26,11 +42,18 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
-    alignItems: "center",
     alignContent: "center",
+    alignItems: "center",
+    // position: "relative",
   },
-  loader: {
-    width: 350,
-    height: 350,
+
+  coverImage: {
+    width: width,
+    resizeMode: "contain",
+  },
+  singinForm: {
+    position: "absolute",
+    bottom: 280,
+    left: 10,
   },
 });
