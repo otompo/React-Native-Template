@@ -22,7 +22,7 @@ function SigninScreen(props) {
         alt="image"
         style={styles.coverImage}
       /> */}
-      <SignUp />
+      <SignIn />
       {/* 
       <View>
         <LottieView
